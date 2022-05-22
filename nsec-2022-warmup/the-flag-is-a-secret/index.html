@@ -1,0 +1,147 @@
+<!doctype html><html><head><title>Nitrate's writeups</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=revised content="2022-05-22T19:37:06 UTC"><title>The Flag Is A Secret :: Nitrate's writeups</title><link rel="shortcut icon" href=/writeups/images/favicon.png type=image/x-icon><link href=/writeups/css/nucleus.css rel=stylesheet><link href=/writeups/css/font-awesome.min.css rel=stylesheet><link href=/writeups/css/featherlight.min.css rel=stylesheet><link href=/writeups/css/auto-complete.css rel=stylesheet><link href=/writeups/theme-flex/style.css rel=stylesheet><link rel=stylesheet href=/writeups/css/bootstrap.min.css><link rel=stylesheet href=/writeups/css/custom.css></head><body data-url=/writeups/nsec-2022-warmup/the-flag-is-a-secret/><header><div class=logo><a class=baselink href=https://n1trate.github.io/writeups>Nitrate's writeups</a></div><div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div></header><article><aside><ul class=menu><li data-nav-id=/writeups/ class=dd-item><a href=/writeups/><i class="fa fa-fw fa-home"></i></a></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022-warmup/>NSec 2022 WarmUp</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/kitty/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/kitty/>Kitty!</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-challenge-logically/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-challenge-logically/>Warmup challenge, logically</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/the-flag-is-a-secret/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>The Flag Is A Secret</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/toque-tracking/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/toque-tracking/>Toque Tracking</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/northsec-flag-token/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/northsec-flag-token/>NorthSec Flag Token</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/vlc-of-the-mariner/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>VLC of the Mariner</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/whamazon/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/whamazon/>Whamazon</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-flag-actual/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-flag-actual/>warmup flag (actual)</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/hidden-harware-secrets/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/hidden-harware-secrets/>Hidden Hardware Secrets</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/fuzzforfun/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/fuzzforfun/>FuzzForFun</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/montr%C3%A9al-remix/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>Montréal Remix</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022/>NSec 2022</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-denial/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-denial/>Portobello - Denial</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-depression/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-depression/>Portobello - Depression</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-bargaining/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-bargaining/>Portobello - Bargaining</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-anger/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-anger/>Portobello - Anger</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/tools/ class="dd-item alwaysopen"><div><a href=/writeups/tools/>Tools</a></div></li></ul><section></section></aside><section class=page><div class=nav-select><center>Navigation :
+<select onchange="location.href=this.value"><option value=/writeups/nsec-2022-warmup/>
+NSec 2022 WarmUp</option><option value=/writeups/nsec-2022-warmup/kitty/>
+-
+Kitty!</option><option value=/writeups/nsec-2022-warmup/warmup-challenge-logically/>
+-
+Warmup challenge, logically</option><option value=/writeups/nsec-2022-warmup/the-flag-is-a-secret/ selected>
+-
+The Flag Is A Secret</option><option value=/writeups/nsec-2022-warmup/toque-tracking/>
+-
+Toque Tracking</option><option value=/writeups/nsec-2022-warmup/northsec-flag-token/>
+-
+NorthSec Flag Token</option><option value=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>
+-
+VLC of the Mariner</option><option value=/writeups/nsec-2022-warmup/whamazon/>
+-
+Whamazon</option><option value=/writeups/nsec-2022-warmup/warmup-flag-actual/>
+-
+warmup flag (actual)</option><option value=/writeups/nsec-2022-warmup/hidden-harware-secrets/>
+-
+Hidden Hardware Secrets</option><option value=/writeups/nsec-2022-warmup/fuzzforfun/>
+-
+FuzzForFun</option><option value=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>
+-
+Montréal Remix</option><option value=/writeups/nsec-2022/>
+NSec 2022</option><option value=/writeups/nsec-2022/portobello-denial/>
+-
+Portobello - Denial</option><option value=/writeups/nsec-2022/portobello-depression/>
+-
+Portobello - Depression</option><option value=/writeups/nsec-2022/portobello-bargaining/>
+-
+Portobello - Bargaining</option><option value=/writeups/nsec-2022/portobello-anger/>
+-
+Portobello - Anger</option><option value=/writeups/tools/>
+Tools</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div></div><h1>The Flag Is A Secret</h1><p>Challenge statement:</p><pre tabindex=0><code>Dylan got his hands on some sensitive source code. Watch his video above to find out why he needs your help...
+🔗https://security.love/nsctfmc/hello.txt
+</code></pre><p>After downloading the <a href=hello.txt>hello.txt</a> file, we can see that it&rsquo;s a base64 blob.</p><p>We can convert it using <code>cat hello.txt | base64 -d > hello.file</code>.<br>Then we can use the file utility to get an idea of what it is.</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ file hello.file 
+</span></span><span style=display:flex><span>hello.file: Zip archive data, at least v1.0 to extract
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ unzip hello.zip
+</span></span><span style=display:flex><span>Archive:  hello.file
+</span></span><span style=display:flex><span>   creating: repo/
+</span></span><span style=display:flex><span>   creating: repo/.git/
+</span></span><span style=display:flex><span>  inflating: repo/.git/config        
+</span></span><span style=display:flex><span>   creating: repo/.git/objects/
+</span></span><span style=display:flex><span>   creating: repo/.git/objects/pack/
+</span></span><span style=display:flex><span>  inflating: repo/.git/objects/pack/pack-eaff52f56b425e5b5ac21716b9d9fdb56e6b2c7a.pack  
+</span></span><span style=display:flex><span>   creating: repo/.git/objects/info/
+</span></span><span style=display:flex><span> extracting: repo/.git/objects/info/packs  
+</span></span><span style=display:flex><span> extracting: repo/.git/HEAD          
+</span></span><span style=display:flex><span>   creating: repo/.git/info/
+</span></span><span style=display:flex><span>  inflating: repo/.git/info/exclude  
+</span></span><span style=display:flex><span>  inflating: repo/.git/info/refs     
+</span></span><span style=display:flex><span>   creating: repo/.git/logs/
+</span></span><span style=display:flex><span>  inflating: repo/.git/logs/HEAD     
+</span></span><span style=display:flex><span>   creating: repo/.git/logs/refs/
+</span></span><span style=display:flex><span>   creating: repo/.git/logs/refs/heads/
+</span></span><span style=display:flex><span>  inflating: repo/.git/logs/refs/heads/master  
+</span></span><span style=display:flex><span>  inflating: repo/.git/description   
+</span></span><span style=display:flex><span>   creating: repo/.git/hooks/
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/commit-msg.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/pre-rebase.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/pre-commit.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/applypatch-msg.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/fsmonitor-watchman.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/pre-receive.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/prepare-commit-msg.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/post-update.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/pre-applypatch.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/pre-push.sample  
+</span></span><span style=display:flex><span>  inflating: repo/.git/hooks/update.sample  
+</span></span><span style=display:flex><span>   creating: repo/.git/refs/
+</span></span><span style=display:flex><span>   creating: repo/.git/refs/heads/
+</span></span><span style=display:flex><span>   creating: repo/.git/refs/tags/
+</span></span><span style=display:flex><span> extracting: repo/.git/index         
+</span></span><span style=display:flex><span>  inflating: repo/.git/packed-refs   
+</span></span><span style=display:flex><span> extracting: repo/.git/COMMIT_EDITMSG
+</span></span></code></pre></div><p>We can see the packed object that is not usually in a clean repository. The repository is also not reacting normally :</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ git log
+</span></span><span style=display:flex><span>fatal: bad object HEAD
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ cat objects/pack/pack-eaff52f56b425e5b5ac21716b9d9fdb56e6b2c7a.pack | git unpack-objects
+</span></span><span style=display:flex><span>Unpacking objects: 100% (11/11), <span style=color:#ff0;font-weight:700>981</span> bytes | 981.00 KiB/s, <span style=color:#fff;font-weight:700>done</span>.
+</span></span></code></pre></div><pre tabindex=0><code>objects
+├── 13
+│   └── 371d7a0caf60d080d2f9196785694736cb926c
+├── 29
+│   └── 4b2a22f4beaaf42446c64f50d46e023e420164
+├── 2b
+│   └── 1ab12f55009cd98c2250e3e1dbe8777644b740
+├── 2c
+│   └── cd75ee92dddff522871ce4ebedd02aed08ba97
+├── 3c
+│   └── a4066edd31c5d9b8e6857073685e0cbd6680cd
+├── 41
+│   └── f7e66043fabb8280cb8fc13df101b080364ad2
+├── 48
+│   └── bda2b5df64b379731f0e78f4aca7c5e132b716
+├── 4b
+│   └── 825dc642cb6eb9a060e54bf8d69288fbee4904
+├── 79
+│   └── 1c0676fa6f9767ed44d0300973ab51bb9dd668
+├── 8e
+│   └── f2fc432808c80ae5e95cd485e2de858c69a839
+└── a8
+    └── fe3389a1d422e1c621b52b67b7aefabe862dd5
+</code></pre><p>Simply using the following could give us the full file, but we got lucky since we did not have to compute diffs between commits :</p><pre tabindex=0><code>$ cat pack/pack-eaff52f56b425e5b5ac21716b9d9fdb56e6b2c7a.pack | git cat-file --batch --batch-all-objects
+[...]
+2ccd75ee92dddff522871ce4ebedd02aed08ba97 blob 16
+No flag here...
+
+3ca4066edd31c5d9b8e6857073685e0cbd6680cd blob 151
+
+[default]
+aws_access_key_id = AKIAYVP4CIPPPFRDPNGX
+aws_secret_access_key = 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
+output = json
+region = us-east-2
+
+
+41f7e66043fabb8280cb8fc13df101b080364ad2 blob 46
+hey, this is the flag file, where&#39;s the flag?
+[...]
+</code></pre><p>Once we called git unpack-objects, the repository became functional and allows us to checkout the different commits or do git diffs to see the different modifications. The file was not modified over time, so the git cat-file was sufficient to give us the aws configuration.</p><pre tabindex=0><code>[default]
+aws_access_key_id = AKIAYVP4CIPPPFRDPNGX
+aws_secret_access_key = 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
+output = json
+region = us-east-2
+</code></pre><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>curl <span style=color:#0ff;font-weight:700>&#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&#34;</span> -o <span style=color:#0ff;font-weight:700>&#34;awscliv2.zip&#34;</span>
+</span></span><span style=display:flex><span>unzip awscliv2.zip
+</span></span><span style=display:flex><span>sudo ./aws/install
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ AWS_CONFIG_FILE=aws.config aws sts get-caller-identity
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#0ff;font-weight:700>&#34;UserId&#34;</span>: <span style=color:#0ff;font-weight:700>&#34;AIDAYVP4CIPPFFVW4CXJG&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#0ff;font-weight:700>&#34;Account&#34;</span>: <span style=color:#0ff;font-weight:700>&#34;595918472158&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#0ff;font-weight:700>&#34;Arn&#34;</span>: <span style=color:#0ff;font-weight:700>&#34;arn:aws:iam::595918472158:user/canarytokens.com@@efklxdafbz2t6lcpp66bj8c61&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ AWS_CONFIG_FILE=aws.config aws s3 ls
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>An error occurred (AccessDenied) when calling the ListBuckets operation: Access Denied
+</span></span></code></pre></div><p><a href=https://www.filestash.app/s3-browser.html>https://www.filestash.app/s3-browser.html</a></p><p>After more than one hour of trying to use multiple tools to figure out which access we have using those credentials, I gave up and sent in the secret access key &ldquo;qa26OSZwBYzHzeOOQZHTYZaNPOzcGT9EnZUoq44c&rdquo;. That was the flag.</p><p>If the challenge went ahead with the AWS credentials, instead of being a honeytoken, we could use the <a href=https://github.com/RhinoSecurityLabs/pacu>Pacu</a> tool to learn more about our permissions.</p><div class=chevrons><div id=navigation></div></div></section></article><footer><div class=footline></div><div><p>Weeeeeeeeeeeeeeee</p></div></footer><script src=/writeups/js/jquery-2.x.min.js></script>
+<script type=text/javascript>var baseurl="https://n1trate.github.io/writeups"</script><script src=/writeups/js/clipboard.min.js></script>
+<script src=/writeups/js/featherlight.min.js></script>
+<script type=text/javascript src=/writeups/js/lunr.min.js></script>
+<script type=text/javascript src=/writeups/js/auto-complete.js></script>
+<script type=text/javascript src=/writeups/js/search.js></script>
+<script src=/writeups/theme-flex/script.js></script>
+<script src=https://n1trate.github.io/writeups/js/scripts.min.js></script></body></html>

@@ -1,0 +1,226 @@
+<!doctype html><html><head><title>Nitrate's writeups</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=revised content="2022-05-22T19:37:06 UTC"><title>VLC of the Mariner :: Nitrate's writeups</title><link rel="shortcut icon" href=/writeups/images/favicon.png type=image/x-icon><link href=/writeups/css/nucleus.css rel=stylesheet><link href=/writeups/css/font-awesome.min.css rel=stylesheet><link href=/writeups/css/featherlight.min.css rel=stylesheet><link href=/writeups/css/auto-complete.css rel=stylesheet><link href=/writeups/theme-flex/style.css rel=stylesheet><link rel=stylesheet href=/writeups/css/bootstrap.min.css><link rel=stylesheet href=/writeups/css/custom.css></head><body data-url=/writeups/nsec-2022-warmup/vlc-of-the-mariner/><header><div class=logo><a class=baselink href=https://n1trate.github.io/writeups>Nitrate's writeups</a></div><div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div></header><article><aside><ul class=menu><li data-nav-id=/writeups/ class=dd-item><a href=/writeups/><i class="fa fa-fw fa-home"></i></a></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022-warmup/>NSec 2022 WarmUp</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/kitty/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/kitty/>Kitty!</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-challenge-logically/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-challenge-logically/>Warmup challenge, logically</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/the-flag-is-a-secret/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>The Flag Is A Secret</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/toque-tracking/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/toque-tracking/>Toque Tracking</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/northsec-flag-token/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/northsec-flag-token/>NorthSec Flag Token</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/vlc-of-the-mariner/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>VLC of the Mariner</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/whamazon/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/whamazon/>Whamazon</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-flag-actual/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-flag-actual/>warmup flag (actual)</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/hidden-harware-secrets/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/hidden-harware-secrets/>Hidden Hardware Secrets</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/fuzzforfun/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/fuzzforfun/>FuzzForFun</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/montr%C3%A9al-remix/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>Montréal Remix</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022/>NSec 2022</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-denial/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-denial/>Portobello - Denial</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-depression/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-depression/>Portobello - Depression</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-bargaining/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-bargaining/>Portobello - Bargaining</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-anger/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-anger/>Portobello - Anger</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/tools/ class="dd-item alwaysopen"><div><a href=/writeups/tools/>Tools</a></div></li></ul><section></section></aside><section class=page><div class=nav-select><center>Navigation :
+<select onchange="location.href=this.value"><option value=/writeups/nsec-2022-warmup/>
+NSec 2022 WarmUp</option><option value=/writeups/nsec-2022-warmup/kitty/>
+-
+Kitty!</option><option value=/writeups/nsec-2022-warmup/warmup-challenge-logically/>
+-
+Warmup challenge, logically</option><option value=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>
+-
+The Flag Is A Secret</option><option value=/writeups/nsec-2022-warmup/toque-tracking/>
+-
+Toque Tracking</option><option value=/writeups/nsec-2022-warmup/northsec-flag-token/>
+-
+NorthSec Flag Token</option><option value=/writeups/nsec-2022-warmup/vlc-of-the-mariner/ selected>
+-
+VLC of the Mariner</option><option value=/writeups/nsec-2022-warmup/whamazon/>
+-
+Whamazon</option><option value=/writeups/nsec-2022-warmup/warmup-flag-actual/>
+-
+warmup flag (actual)</option><option value=/writeups/nsec-2022-warmup/hidden-harware-secrets/>
+-
+Hidden Hardware Secrets</option><option value=/writeups/nsec-2022-warmup/fuzzforfun/>
+-
+FuzzForFun</option><option value=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>
+-
+Montréal Remix</option><option value=/writeups/nsec-2022/>
+NSec 2022</option><option value=/writeups/nsec-2022/portobello-denial/>
+-
+Portobello - Denial</option><option value=/writeups/nsec-2022/portobello-depression/>
+-
+Portobello - Depression</option><option value=/writeups/nsec-2022/portobello-bargaining/>
+-
+Portobello - Bargaining</option><option value=/writeups/nsec-2022/portobello-anger/>
+-
+Portobello - Anger</option><option value=/writeups/tools/>
+Tools</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div></div><h1>VLC of the Mariner</h1><p>Challenge statement:</p><pre tabindex=0><code>A long long time ago, a ship was driven by storms to the cold country towards the South Pole. From there, strange things happened and the men of the ship were never seen again. What happened to these people? To find out, solve the mystery of the VLC mariner.
+</code></pre><p><a href="https://drive.google.com/file/d/1hIH2AWn_9ng7eKXnQPNZgrBeGj7ZyejZ/view?usp=sharing">https://drive.google.com/file/d/1hIH2AWn_9ng7eKXnQPNZgrBeGj7ZyejZ/view?usp=sharing</a></p><p>Downloading and extracting that zip file shows us the source code for VLC. My first approach is to try to find the version and download the real source code, in case we can see what is different.</p><p>We can find the version in the configure file:</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#007f7f># Guess values for system-dependent variables and create Makefiles.</span>
+</span></span><span style=display:flex><span><span style=color:#007f7f># Generated by GNU Autoconf 2.69 for vlc 3.0.12.</span>
+</span></span><span style=display:flex><span><span style=color:#007f7f>#</span>
+</span></span><span style=display:flex><span><span style=color:#007f7f># Copyright 1999-2020 VLC authors and VideoLAN</span>
+</span></span></code></pre></div><p>We can now download the real <a href=https://github.com/videolan/vlc/tree/3.0.12>VLC 3.0.12</a> and compare it with <code>diff -r vlc-3.0.12 vlc-mariner-main</code>.</p><pre tabindex=0><code>diff -r vlc-3.0.12/bin/vlc.c vlc-mariner-main/bin/vlc.c
+111a112,116
+&gt; static void look_at_the_main_method() 
+&gt; {
+&gt; 
+&gt; }
+&gt; 
+116a122,125
+&gt;     /* Is this the flag? Almost but not quite.
+&gt;      * Four times fifty, but their count is 0.
+&gt;      * Divided in their rank, none of them a hero.
+&gt;      * Let’s leave the riddles here, find a divide by zero.  */
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/modules/access/dshow/filter.cpp vlc-mariner-main/modules/access/dshow/filter.cpp
+100a101,122
+&gt; 
+&gt; int CapturingPin() {
+&gt;     // A cryptic message was sent to the submariner over a secure line:
+&gt;     //
+&gt;     // /--- BEGIN TRANSMISSION----|
+&gt;     // 
+&gt;     // Captain, please input the following key in the special tool we referenced in SECURITY 
+&gt;     // documents:
+&gt;     //
+&gt;     //     cpg.call.name(&#34;malloc&#34;).where(_.ar             .....t12ry3tyru@%#$^$ghgjj        
+&gt;     // !!!!! TRANSMISSION INTERRUPTED !!!!!
+&gt;     //
+&gt;     // RECONNECTING...
+&gt;     // 3...2...1
+&gt;     // 
+&gt;     // Captain, listen to me! 
+&gt;     // Memory allocations with arithmetic operations are dangerous... 
+&gt;     // Please find a memory allocation with multiplication in our sinking ship!
+&gt; 
+&gt;     return 0;
+&gt; }
+&gt; 
+227a250,263
+&gt; }
+&gt; 
+&gt; int CapturedPin() {
+&gt;     int zero = 200;
+&gt;     int two_hundred = 0;
+&gt;     if (zero == 0) {
+&gt;         return two_hundred/zero;
+&gt;     } else {
+&gt;         if (zero != 0) {
+&gt;             return zero/two_hundred;
+&gt;         } else {
+&gt;             return CapturingPin();
+&gt;         }
+&gt;     }
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/misc/update_crypto.c vlc-mariner-main/src/misc/update_crypto.c
+690c690,693
+&lt;                 p_key-&gt;psz_username = (uint8_t*)malloc( i_packet_len + 1);
+---
+&gt;                       int HERE_LIE_THE_200 = 1
+&gt;                 // |[]      SUBMIT:       |[]
+&gt;                 // | I shot the albatross |
+&gt;                 p_key-&gt;psz_username = (uint8_t*)malloc( i_packet_len * HERE_LIE_THE_200_MEN);
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/network/httpd.c vlc-mariner-main/src/network/httpd.c
+31a32
+&gt; #include &#34;networking.h&#34;
+254a256,266
+&gt; }
+&gt; 
+&gt; void begin_quote (char **body, int code, const char *url)
+&gt; {
+&gt;     const char *errname = httpd_ReasonFromCode (code);
+&gt;     assert (errname);
+&gt;     int res = 1;
+&gt;     if (res == -1) {
+&gt;         *body = NULL;
+&gt;         i(code);
+&gt;     }
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/network/io.c vlc-mariner-main/src/network/io.c
+50a51
+&gt; #include &#34;networking.h&#34;
+104a106,130
+&gt; void end_quote (int code)
+&gt; {
+&gt;     int 🚩;
+&gt;     int have_no_meaning = 1;
+&gt;     🚩 = have_no_meaning;
+&gt; }
+&gt; 
+&gt; void albatross (int code)
+&gt; {
+&gt;     int ation = code;
+&gt;     struct addrinfo hints = {
+&gt;         .ai_socktype = type,
+&gt;         .ai_protocol = protocol,
+&gt;         .ai_flags = AI_PASSIVE | AI_NUMERICSERV | AI_IDN,
+&gt;     }, *res;
+&gt; 
+&gt;     msg_Dbg (p_this, &#34;net: listening to %s port %d&#34;,
+&gt;              (psz_host != NULL) ? psz_host : &#34;*&#34;, i_port);
+&gt; 
+&gt;     int i_val = vlc_getaddrinfo (psz_host, i_port, &amp;hints, &amp;res);
+&gt;     if (i_val)
+&gt;     {
+&gt;         end_quote(ation);
+&gt;     }
+&gt; }
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/network/rootbind.c vlc-mariner-main/src/network/rootbind.c
+35a36
+&gt; #include &#34;networking.h&#34;
+183a185,197
+&gt; }
+&gt; 
+&gt; void the (int code)
+&gt; {
+&gt;     int pew = code;
+&gt;     static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+&gt;     struct sockaddr_storage ss;
+&gt;     int fd, sock = -1;
+&gt; 
+&gt;     const char *sockenv = getenv (&#34;VLC_ROOTWRAP_SOCK&#34;);
+&gt;     if (sockenv != NULL)
+&gt;         sock = atoi (sockenv);
+&gt;     albatross(pew * 2);
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/network/tcp.c vlc-mariner-main/src/network/tcp.c
+33a34
+&gt; #include &#34;networking.h&#34;
+260a262,278
+&gt; void shot (int code) 
+&gt; {
+&gt;     int thing = code;
+&gt;     int *pi_fd;
+&gt;     unsigned n = 0;
+&gt;     while (pi_fd[n] != -1)
+&gt;         n++;
+&gt; 
+&gt;     struct pollfd ufd[n];
+&gt;     /* Initialize file descriptor set */
+&gt;     for (unsigned i = 0; i &lt; n; i++)
+&gt;     {
+&gt;         ufd[i].fd = pi_fd[i];
+&gt;         ufd[i].events = POLLIN;
+&gt;     }
+&gt;     the(thing);
+&gt; }
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/network/udp.c vlc-mariner-main/src/network/udp.c
+39a40
+&gt; #include &#34;networking.h&#34;
+202a204,210
+&gt; void i( int code )
+&gt; {
+&gt;     int gun = code;
+&gt;     char *ifname = var_InheritString (obj, &#34;miface&#34;);
+&gt;     if (ifname == NULL)
+&gt;         shot(gun);
+&gt; }
+</code></pre><pre tabindex=0><code>diff -r vlc-3.0.12/src/video_output/display.c vlc-mariner-main/src/video_output/display.c
+536c536
+&lt;         msg_Dbg(vd, &#34;VoutDisplayEvent &#39;double click&#39;&#34;);
+---
+&gt;         msg_Dbg(vd, &#34;Look at the main method ⚓&#34;);
+</code></pre><p>There is also two interesting files. One is src/network/networking.h which contains the following:</p><pre tabindex=0><code>void begin_quote (char, int, const char*);
+void i(int);
+void shot(int);
+void the(int);
+void albatross(int);
+void end_quote(int);
+</code></pre><p>(Spoiler, that is the flag)</p><p>And the second is refered to in the mariner version of filter.cpp: security.txt</p><pre tabindex=0><code>Static (adj.)
+Lacking in movement, action, or change, especially in a way viewed as undesirable or uninteresting.
+
+You’ve probably reviewed your own code at some point in your life. 
+
+Performing a source code review is one of the best ways to find security issues in applications. Looking at source code to identify vulnerabilities without running the program is also called &#34;static code analysis&#34;.
+
+There are many ways you can start reviewing your code for security bugs. But in general, it’s good to start by learning what the most common vulnerabilities and security pitfalls are for the type of application you are building. Then, get familiar with the indicators and signatures of those vulnerabilities so that you can identify similar patterns in source code. As an example, the signature for an XXE vulnerability is passing user-supplied XML to a parser without disabling DTDs or external entities. 
+
+During a code review session, you typically look for bad security patterns, universal issues like input validation and injection issues, and low-level coding flaws like arithmetic issues and memory access bugs. You can also search for strings, keywords, and code patterns known to be indicators for vulnerabilities or misconfiguration: hardcoded API keys, encryption keys, and database passwords, outdated dependencies versions, methods known to be unsafe, etc. For more information about conducting code reviews, visit this guide: https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf.
+
+Automated static code analysis techniques are often driven by compiler technologies. One of these methods is data-flow analysis. Data flow analysis studies how data propagate in a program. For instance, you can track sensitive information or user-controlled input and how they interact with parts of the program. Think of data as water: flowing from the source of the water (the tap) to the sink. A &#34;source&#34; is the code that allows a vulnerability to happen, whereas a &#34;sink&#34; is where the vulnerability actually happens. Take command injection vulnerabilities, for example. A &#34;source&#34; in this case could be a function that takes in user input. Whereas the &#34;sink&#34; would be functions that execute system commands. If the untrusted user input can get from &#34;source&#34; to &#34;sink&#34; without proper sanitization or validation, there is a command injection vulnerability. Many common vulnerabilities can be identified by tracking this &#34;data flow&#34; from appropriate sources to corresponding sinks. The ancient mariners have long told a tale, of a tool named Joern that can hunt down code quality issues made from hell. Remember this phrase as you near the end of the game, these queries sometimes look like a chain. But first, to learn the craft of the ancient mariner, you must first find a string with an anchor ⚓. 
+
+As you can probably tell, this process is super dependent on the programming language in use, etc. On the other hand, dynamic analyses tools act more like robo pentesters. They paste &#34;&lt;script&gt;alert()&lt;/script&gt;&#34; into form fields is what I’ve heard.
+</code></pre><p>So if we put the pieces back together, it&rsquo;s a static code analysis challenge. Looking at the Joern tool online, and googling with the part of the query that is given to us, we can find the full query to be the following: <code>cpg.call("malloc").where(_.argument(1).arithmetics)</code>, which confirms the suspicious message <code>Memory allocations with arithmetic operations are dangerous... Please find a memory allocation with multiplication in our sinking ship!</code>. We can find one such occurence in update_crypto.c where the code was changed to <code>p_key->psz_username = (uint8_t*)malloc( i_packet_len * HERE_LIE_THE_200_MEN);</code>. Right above it was a comment saying: <code>SUBMIT: I shot the albatross</code>, which was the flag. Therefore, all functions chaining together, starting with begin_quote() going to i(), shot(), the(), albatross() and ending with end_quote() was another way to find the flag.</p><div class=chevrons><div id=navigation></div></div></section></article><footer><div class=footline></div><div><p>Weeeeeeeeeeeeeeee</p></div></footer><script src=/writeups/js/jquery-2.x.min.js></script>
+<script type=text/javascript>var baseurl="https://n1trate.github.io/writeups"</script><script src=/writeups/js/clipboard.min.js></script>
+<script src=/writeups/js/featherlight.min.js></script>
+<script type=text/javascript src=/writeups/js/lunr.min.js></script>
+<script type=text/javascript src=/writeups/js/auto-complete.js></script>
+<script type=text/javascript src=/writeups/js/search.js></script>
+<script src=/writeups/theme-flex/script.js></script>
+<script src=https://n1trate.github.io/writeups/js/scripts.min.js></script></body></html>

@@ -1,0 +1,85 @@
+<!doctype html><html><head><title>Nitrate's writeups</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=revised content="2022-05-22T19:37:06 UTC"><title>Toque Tracking :: Nitrate's writeups</title><link rel="shortcut icon" href=/writeups/images/favicon.png type=image/x-icon><link href=/writeups/css/nucleus.css rel=stylesheet><link href=/writeups/css/font-awesome.min.css rel=stylesheet><link href=/writeups/css/featherlight.min.css rel=stylesheet><link href=/writeups/css/auto-complete.css rel=stylesheet><link href=/writeups/theme-flex/style.css rel=stylesheet><link rel=stylesheet href=/writeups/css/bootstrap.min.css><link rel=stylesheet href=/writeups/css/custom.css></head><body data-url=/writeups/nsec-2022-warmup/toque-tracking/><header><div class=logo><a class=baselink href=https://n1trate.github.io/writeups>Nitrate's writeups</a></div><div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div></header><article><aside><ul class=menu><li data-nav-id=/writeups/ class=dd-item><a href=/writeups/><i class="fa fa-fw fa-home"></i></a></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022-warmup/>NSec 2022 WarmUp</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/kitty/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/kitty/>Kitty!</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-challenge-logically/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-challenge-logically/>Warmup challenge, logically</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/the-flag-is-a-secret/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>The Flag Is A Secret</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/toque-tracking/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/toque-tracking/>Toque Tracking</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/northsec-flag-token/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/northsec-flag-token/>NorthSec Flag Token</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/vlc-of-the-mariner/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>VLC of the Mariner</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/whamazon/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/whamazon/>Whamazon</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-flag-actual/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-flag-actual/>warmup flag (actual)</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/hidden-harware-secrets/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/hidden-harware-secrets/>Hidden Hardware Secrets</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/fuzzforfun/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/fuzzforfun/>FuzzForFun</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/montr%C3%A9al-remix/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>Montréal Remix</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022/>NSec 2022</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-denial/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-denial/>Portobello - Denial</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-depression/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-depression/>Portobello - Depression</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-bargaining/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-bargaining/>Portobello - Bargaining</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-anger/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-anger/>Portobello - Anger</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/tools/ class="dd-item alwaysopen"><div><a href=/writeups/tools/>Tools</a></div></li></ul><section></section></aside><section class=page><div class=nav-select><center>Navigation :
+<select onchange="location.href=this.value"><option value=/writeups/nsec-2022-warmup/>
+NSec 2022 WarmUp</option><option value=/writeups/nsec-2022-warmup/kitty/>
+-
+Kitty!</option><option value=/writeups/nsec-2022-warmup/warmup-challenge-logically/>
+-
+Warmup challenge, logically</option><option value=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>
+-
+The Flag Is A Secret</option><option value=/writeups/nsec-2022-warmup/toque-tracking/ selected>
+-
+Toque Tracking</option><option value=/writeups/nsec-2022-warmup/northsec-flag-token/>
+-
+NorthSec Flag Token</option><option value=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>
+-
+VLC of the Mariner</option><option value=/writeups/nsec-2022-warmup/whamazon/>
+-
+Whamazon</option><option value=/writeups/nsec-2022-warmup/warmup-flag-actual/>
+-
+warmup flag (actual)</option><option value=/writeups/nsec-2022-warmup/hidden-harware-secrets/>
+-
+Hidden Hardware Secrets</option><option value=/writeups/nsec-2022-warmup/fuzzforfun/>
+-
+FuzzForFun</option><option value=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>
+-
+Montréal Remix</option><option value=/writeups/nsec-2022/>
+NSec 2022</option><option value=/writeups/nsec-2022/portobello-denial/>
+-
+Portobello - Denial</option><option value=/writeups/nsec-2022/portobello-depression/>
+-
+Portobello - Depression</option><option value=/writeups/nsec-2022/portobello-bargaining/>
+-
+Portobello - Bargaining</option><option value=/writeups/nsec-2022/portobello-anger/>
+-
+Portobello - Anger</option><option value=/writeups/tools/>
+Tools</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div></div><h1>Toque Tracking</h1><p>Challenge statement:</p><pre tabindex=0><code>The Toqué Restaurant Team is beside themselves... someone appears to have highjacked the restaurant&#39;s Google account along with their website analytics.
+
+Google has asked them to provide their Google Tag Manager number along with an affidavit to recover the account, but they have no idea what that is, or how to find it. Do you think your team can leap to their aid? Quebec&#39;s gastronomy may just depend on it!
+
+Warning⚠️ : This is a drill with a live, operational environment. Only passive reconnaissance is allowed. No active scanning or brute-forcing shall be used. All legal consequences of breaking this rule are the responsibility of those conducting it.
+
+Determine the Restaurant&#39;s Google Tag Manager number and provide it in your flag submission for this challenge.
+
+Enter only the part of the google tag manager number that follows the &#34;GTM-&#34;.
+</code></pre><p>Searching for <code>Toqué Restaurant</code> on Google, we can find the website of the restaurant: <a href=https://www.restaurant-toque.com/en>https://www.restaurant-toque.com/en</a>.</p><p>Looking at the page source, we can find the two following snippet containing the letters <code>GTM</code>:</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>[...]
+</span></span><span style=display:flex><span>  <span style=color:#007f7f>// gtm code snippet
+</span></span></span><span style=display:flex><span><span style=color:#007f7f></span>  (<span style=color:#fff;font-weight:700>function</span> (w, d, s, l, i) {
+</span></span><span style=display:flex><span>  w[l] = w[l] || []; w[l].push({
+</span></span><span style=display:flex><span>    <span style=color:#0ff;font-weight:700>&#39;gtm.start&#39;</span>:
+</span></span><span style=display:flex><span>      <span style=color:#fff;font-weight:700>new</span> <span style=color:#fff;font-weight:700>Date</span>().getTime(), event: <span style=color:#0ff;font-weight:700>&#39;gtm.js&#39;</span>
+</span></span><span style=display:flex><span>  }); <span style=color:#fff;font-weight:700>var</span> f = d.getElementsByTagName(s)[<span style=color:#ff0;font-weight:700>0</span>],
+</span></span><span style=display:flex><span>    j = d.createElement(s), dl = l != <span style=color:#0ff;font-weight:700>&#39;dataLayer&#39;</span> ? <span style=color:#0ff;font-weight:700>&#39;&amp;l=&#39;</span> + l : <span style=color:#0ff;font-weight:700>&#39;&#39;</span>; j.<span style=color:#fff;font-weight:700>async</span> = <span style=color:#fff;font-weight:700>true</span>; j.src =
+</span></span><span style=display:flex><span>      <span style=color:#0ff;font-weight:700>&#39;https://www.googletagmanager.com/gtm.js?id=&#39;</span> + i + dl; f.parentNode.insertBefore(j, f);
+</span></span><span style=display:flex><span>  })(<span style=color:#fff;font-weight:700>window</span>, <span style=color:#fff;font-weight:700>document</span>, <span style=color:#0ff;font-weight:700>&#39;script&#39;</span>, <span style=color:#0ff;font-weight:700>&#39;dataLayer&#39;</span>, <span style=color:#0ff;font-weight:700>&#39;GTM-KVM6BMM&#39;</span>);
+</span></span><span style=display:flex><span>&lt;<span style=color:red>/script&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#007f7f>&lt;!--</span> End Google Tag Manager --&gt;
+</span></span><span style=display:flex><span>&lt;title&gt;A leader <span style=color:#fff;font-weight:700>of</span> Quebec gastronomy - Restaurant Toqué&lt;<span style=color:red>/title&gt;</span>
+</span></span><span style=display:flex><span>&lt;script&gt;dl = [];
+</span></span><span style=display:flex><span>(<span style=color:#fff;font-weight:700>function</span>(w,d,s,l,i){w[l]=w[l]||[];w[l].push({<span style=color:#0ff;font-weight:700>&#39;gtm.start&#39;</span>:
+</span></span><span style=display:flex><span><span style=color:#fff;font-weight:700>new</span> <span style=color:#fff;font-weight:700>Date</span>().getTime(),event:<span style=color:#0ff;font-weight:700>&#39;gtm.js&#39;</span>});<span style=color:#fff;font-weight:700>var</span> f=d.getElementsByTagName(s)[<span style=color:#ff0;font-weight:700>0</span>],
+</span></span><span style=display:flex><span>j=d.createElement(s),dl=l!=<span style=color:#0ff;font-weight:700>&#39;dataLayer&#39;</span>?<span style=color:#0ff;font-weight:700>&#39;&amp;l=&#39;</span>+l:<span style=color:#0ff;font-weight:700>&#39;&#39;</span>;j.<span style=color:#fff;font-weight:700>async</span>=<span style=color:#fff;font-weight:700>true</span>;j.src=
+</span></span><span style=display:flex><span><span style=color:#0ff;font-weight:700>&#39;//www.googletagmanager.com/gtm.js?id=&#39;</span>+i+dl;f.parentNode.insertBefore(j,f);
+</span></span><span style=display:flex><span>})(<span style=color:#fff;font-weight:700>window</span>,<span style=color:#fff;font-weight:700>document</span>,<span style=color:#0ff;font-weight:700>&#39;script&#39;</span>,<span style=color:#0ff;font-weight:700>&#39;dl&#39;</span>,<span style=color:#0ff;font-weight:700>&#39;GTM-5J9R53Z&#39;</span>);
+</span></span><span style=display:flex><span>&lt;<span style=color:red>/script&gt;</span>
+</span></span><span style=display:flex><span>[...]
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>[...]
+</span></span><span style=display:flex><span>&lt;body data-site=<span style=color:#0ff;font-weight:700>&#34;toque&#34;</span> data-handle=<span style=color:#0ff;font-weight:700>&#34;toque_homepage&#34;</span>&gt;&lt;noscript&gt;&lt;iframe src=<span style=color:#0ff;font-weight:700>&#34;//www.googletagmanager.com/ns.html?id=GTM-5J9R53Z&#34;</span>
+</span></span><span style=display:flex><span>height=<span style=color:#0ff;font-weight:700>&#34;0&#34;</span> width=<span style=color:#0ff;font-weight:700>&#34;0&#34;</span> style=<span style=color:#0ff;font-weight:700>&#34;display:none;visibility:hidden&#34;</span>&gt;&lt;<span style=color:red>/iframe&gt;&lt;/noscript&gt;</span>
+</span></span><span style=display:flex><span>&lt;noscript&gt;&lt;img height=<span style=color:#0ff;font-weight:700>&#34;1&#34;</span> width=<span style=color:#0ff;font-weight:700>&#34;1&#34;</span> style=<span style=color:#0ff;font-weight:700>&#34;display:none&#34;</span>
+</span></span><span style=display:flex><span>src=<span style=color:#0ff;font-weight:700>&#34;//www.facebook.com/tr?id=2641458616125750&amp;ev=PageView&amp;noscript=1&#34;</span> /&gt;&lt;<span style=color:red>/noscript&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#007f7f>&lt;!--</span> Google Tag Manager (noscript) --&gt;
+</span></span><span style=display:flex><span>&lt;noscript&gt;
+</span></span><span style=display:flex><span>    &lt;iframe src=<span style=color:#0ff;font-weight:700>&#34;https://www.googletagmanager.com/ns.html?id=GTM-KVM6BMM&#34;</span> height=<span style=color:#0ff;font-weight:700>&#34;0&#34;</span> width=<span style=color:#0ff;font-weight:700>&#34;0&#34;</span> style=<span style=color:#0ff;font-weight:700>&#34;display:none;visibility:hidden&#34;</span>&gt;&lt;<span style=color:red>/iframe&gt;</span>
+</span></span><span style=display:flex><span>&lt;<span style=color:red>/noscript&gt;</span>
+</span></span><span style=display:flex><span>[...]
+</span></span></code></pre></div><p>In both of these snippets, we can find two tags. The first one was GTM-KVM6BMM and the second GTM-5J9R53Z. Without a second to lose, we can try the first, and KVM6BMM was the flag.</p><div class=chevrons><div id=navigation></div></div></section></article><footer><div class=footline></div><div><p>Weeeeeeeeeeeeeeee</p></div></footer><script src=/writeups/js/jquery-2.x.min.js></script>
+<script type=text/javascript>var baseurl="https://n1trate.github.io/writeups"</script><script src=/writeups/js/clipboard.min.js></script>
+<script src=/writeups/js/featherlight.min.js></script>
+<script type=text/javascript src=/writeups/js/lunr.min.js></script>
+<script type=text/javascript src=/writeups/js/auto-complete.js></script>
+<script type=text/javascript src=/writeups/js/search.js></script>
+<script src=/writeups/theme-flex/script.js></script>
+<script src=https://n1trate.github.io/writeups/js/scripts.min.js></script></body></html>

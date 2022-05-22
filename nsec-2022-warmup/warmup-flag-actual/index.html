@@ -1,0 +1,85 @@
+<!doctype html><html><head><title>Nitrate's writeups</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=revised content="2022-05-22T19:37:06 UTC"><title>warmup flag (actual) :: Nitrate's writeups</title><link rel="shortcut icon" href=/writeups/images/favicon.png type=image/x-icon><link href=/writeups/css/nucleus.css rel=stylesheet><link href=/writeups/css/font-awesome.min.css rel=stylesheet><link href=/writeups/css/featherlight.min.css rel=stylesheet><link href=/writeups/css/auto-complete.css rel=stylesheet><link href=/writeups/theme-flex/style.css rel=stylesheet><link rel=stylesheet href=/writeups/css/bootstrap.min.css><link rel=stylesheet href=/writeups/css/custom.css></head><body data-url=/writeups/nsec-2022-warmup/warmup-flag-actual/><header><div class=logo><a class=baselink href=https://n1trate.github.io/writeups>Nitrate's writeups</a></div><div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div></header><article><aside><ul class=menu><li data-nav-id=/writeups/ class=dd-item><a href=/writeups/><i class="fa fa-fw fa-home"></i></a></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022-warmup/>NSec 2022 WarmUp</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/kitty/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/kitty/>Kitty!</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-challenge-logically/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-challenge-logically/>Warmup challenge, logically</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/the-flag-is-a-secret/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>The Flag Is A Secret</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/toque-tracking/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/toque-tracking/>Toque Tracking</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/northsec-flag-token/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/northsec-flag-token/>NorthSec Flag Token</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/vlc-of-the-mariner/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>VLC of the Mariner</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/whamazon/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/whamazon/>Whamazon</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/warmup-flag-actual/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/warmup-flag-actual/>warmup flag (actual)</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/hidden-harware-secrets/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/hidden-harware-secrets/>Hidden Hardware Secrets</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/fuzzforfun/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/fuzzforfun/>FuzzForFun</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022-warmup/montr%C3%A9al-remix/ class=dd-item><div><a href=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>Montréal Remix</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022/>NSec 2022</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-denial/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-denial/>Portobello - Denial</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-depression/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-depression/>Portobello - Depression</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-bargaining/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-bargaining/>Portobello - Bargaining</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-anger/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-anger/>Portobello - Anger</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/tools/ class="dd-item alwaysopen"><div><a href=/writeups/tools/>Tools</a></div></li></ul><section></section></aside><section class=page><div class=nav-select><center>Navigation :
+<select onchange="location.href=this.value"><option value=/writeups/nsec-2022-warmup/>
+NSec 2022 WarmUp</option><option value=/writeups/nsec-2022-warmup/kitty/>
+-
+Kitty!</option><option value=/writeups/nsec-2022-warmup/warmup-challenge-logically/>
+-
+Warmup challenge, logically</option><option value=/writeups/nsec-2022-warmup/the-flag-is-a-secret/>
+-
+The Flag Is A Secret</option><option value=/writeups/nsec-2022-warmup/toque-tracking/>
+-
+Toque Tracking</option><option value=/writeups/nsec-2022-warmup/northsec-flag-token/>
+-
+NorthSec Flag Token</option><option value=/writeups/nsec-2022-warmup/vlc-of-the-mariner/>
+-
+VLC of the Mariner</option><option value=/writeups/nsec-2022-warmup/whamazon/>
+-
+Whamazon</option><option value=/writeups/nsec-2022-warmup/warmup-flag-actual/ selected>
+-
+warmup flag (actual)</option><option value=/writeups/nsec-2022-warmup/hidden-harware-secrets/>
+-
+Hidden Hardware Secrets</option><option value=/writeups/nsec-2022-warmup/fuzzforfun/>
+-
+FuzzForFun</option><option value=/writeups/nsec-2022-warmup/montr%C3%A9al-remix/>
+-
+Montréal Remix</option><option value=/writeups/nsec-2022/>
+NSec 2022</option><option value=/writeups/nsec-2022/portobello-denial/>
+-
+Portobello - Denial</option><option value=/writeups/nsec-2022/portobello-depression/>
+-
+Portobello - Depression</option><option value=/writeups/nsec-2022/portobello-bargaining/>
+-
+Portobello - Bargaining</option><option value=/writeups/nsec-2022/portobello-anger/>
+-
+Portobello - Anger</option><option value=/writeups/tools/>
+Tools</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div></div><h1>warmup flag (actual)</h1><p>Challenge statement:</p><pre tabindex=0><code>Here&#39;s a flag for you. Can you flag the flag?
+</code></pre><p><a href="https://drive.google.com/file/d/1EJrd_iDuY9xtyMmv6L9vdjbDM8K-t5RR/view?usp=sharing">https://drive.google.com/file/d/1EJrd_iDuY9xtyMmv6L9vdjbDM8K-t5RR/view?usp=sharing</a></p><p>We get a base64 blob, so first step first, we can recreate the real file with</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cat actualflag.txt | base64 -d &gt; actualflag.bin
+</span></span></code></pre></div><p>We can use the file command to get a guess of what we have at hand</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ file actualflag.bin 
+</span></span><span style=display:flex><span>actualflag.bin: PNG image data, <span style=color:#ff0;font-weight:700>149</span> x 247, 8-bit/color RGBA, non-interlaced
+</span></span></code></pre></div><p>Using exiftool, we could check what the metadata of that PNG file is, which may give us an hint.</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ exiftool actualflag.bin
+</span></span><span style=display:flex><span>ExifTool Version Number         : 11.88
+</span></span><span style=display:flex><span>File Name                       : actualflag.bin
+</span></span><span style=display:flex><span>Directory                       : .
+</span></span><span style=display:flex><span>File Size                       : 3.3 kB
+</span></span><span style=display:flex><span>[...]
+</span></span><span style=display:flex><span>File Permissions                : rw-rw-r--
+</span></span><span style=display:flex><span>File Type                       : PNG
+</span></span><span style=display:flex><span>File Type Extension             : png
+</span></span><span style=display:flex><span>MIME Type                       : image/png
+</span></span><span style=display:flex><span>Image Width                     : <span style=color:#ff0;font-weight:700>149</span>
+</span></span><span style=display:flex><span>Image Height                    : <span style=color:#ff0;font-weight:700>247</span>
+</span></span><span style=display:flex><span>Bit Depth                       : <span style=color:#ff0;font-weight:700>8</span>
+</span></span><span style=display:flex><span>Color Type                      : RGB with Alpha
+</span></span><span style=display:flex><span>Compression                     : Deflate/Inflate
+</span></span><span style=display:flex><span>Filter                          : Adaptive
+</span></span><span style=display:flex><span>Interlace                       : Noninterlaced
+</span></span><span style=display:flex><span>SRGB Rendering                  : Perceptual
+</span></span><span style=display:flex><span>Gamma                           : 2.2
+</span></span><span style=display:flex><span>Pixels Per Unit X               : <span style=color:#ff0;font-weight:700>3780</span>
+</span></span><span style=display:flex><span>Pixels Per Unit Y               : <span style=color:#ff0;font-weight:700>3780</span>
+</span></span><span style=display:flex><span>Pixel Units                     : meters
+</span></span><span style=display:flex><span>Creation Time                   : 2022:02:22 22:52:50
+</span></span><span style=display:flex><span>Warning                         : [minor] Trailer data after PNG IEND chunk
+</span></span><span style=display:flex><span>Image Size                      : 149x247
+</span></span><span style=display:flex><span>Megapixels                      : 0.037
+</span></span></code></pre></div><p>We can see one Warning toward the end, which says that we have trailing data. We can then use hexdump -C to check what that data look like.</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ hexdump -C actualflag.bin | tail
+</span></span><span style=display:flex><span>00000cc0  c4 <span style=color:#ff0;font-weight:700>73</span> <span style=color:#ff0;font-weight:700>93</span> eb ce 5a 4f b2  bc d2 a8 2c 6d 7b <span style=color:#ff0;font-weight:700>56</span> <span style=color:#ff0;font-weight:700>79</span>  |.s...ZO....,m{Vy|
+</span></span><span style=display:flex><span>00000cd0  <span style=color:#ff0;font-weight:700>82</span> be <span style=color:#ff0;font-weight:700>57</span> <span style=color:#ff0;font-weight:700>72</span> <span style=color:#ff0;font-weight:700>04</span> <span style=color:#ff0;font-weight:700>57</span> af <span style=color:#ff0;font-weight:700>96</span>  c3 f3 <span style=color:#ff0;font-weight:700>75</span> <span style=color:#ff0;font-weight:700>59</span> 1c <span style=color:#ff0;font-weight:700>19</span> a7 <span style=color:#ff0;font-weight:700>64</span>  |..Wr.W....uY...d|
+</span></span><span style=display:flex><span>00000ce0  6e 5b <span style=color:#ff0;font-weight:700>42</span> <span style=color:#ff0;font-weight:700>72</span> 9d 4d a3 c9  e4 a8 b0 <span style=color:#ff0;font-weight:700>83</span> 6d eb e8 f3  |n[Br.M......m...|
+</span></span><span style=display:flex><span>00000cf0  <span style=color:#ff0;font-weight:700>26</span> cb ed ad db <span style=color:#ff0;font-weight:700>97</span> b7 fa  <span style=color:#ff0;font-weight:700>58</span> 2b f1 9b a7 <span style=color:#ff0;font-weight:700>72</span> <span style=color:#ff0;font-weight:700>60</span> 9d  |&amp;.......X+...r<span style=color:#0ff;font-weight:700>`</span>.|
+</span></span><span style=display:flex><span>00000d00  c6 d7 <span style=color:#ff0;font-weight:700>76</span> cf e4 6e c3 <span style=color:#ff0;font-weight:700>51</span>  2c be a3 bf 2e <span style=color:#ff0;font-weight:700>59</span> b5 3b  |..v..n.Q,....Y.;|
+</span></span><span style=display:flex><span>00000d10  <span style=color:#ff0;font-weight:700>39</span> d2 ae 5f <span style=color:#ff0;font-weight:700>85</span> a2 2b <span style=color:#ff0;font-weight:700>54</span>  4d <span style=color:#ff0;font-weight:700>85</span> fe <span style=color:#ff0;font-weight:700>50</span> a8 9a 0a fd  |9.._..+TM..P....|
+</span></span><span style=display:flex><span>00000d20  <span style=color:#ff0;font-weight:700>40</span> e4 ff <span style=color:#ff0;font-weight:700>81</span> d2 f3 0d c2  e2 e5 de <span style=color:#ff0;font-weight:700>00</span> <span style=color:#ff0;font-weight:700>00</span> <span style=color:#ff0;font-weight:700>00</span> <span style=color:#ff0;font-weight:700>00</span> <span style=color:#ff0;font-weight:700>49</span>  |@..............I|
+</span></span><span style=display:flex><span>00000d30  <span style=color:#ff0;font-weight:700>45</span> 4e <span style=color:#ff0;font-weight:700>44</span> ae <span style=color:#ff0;font-weight:700>42</span> <span style=color:#ff0;font-weight:700>60</span> <span style=color:#ff0;font-weight:700>82</span> <span style=color:#ff0;font-weight:700>42</span>  <span style=color:#ff0;font-weight:700>32</span> <span style=color:#ff0;font-weight:700>32</span> <span style=color:#ff0;font-weight:700>39</span> 2d <span style=color:#ff0;font-weight:700>30</span> <span style=color:#ff0;font-weight:700>30</span> <span style=color:#ff0;font-weight:700>31</span> <span style=color:#ff0;font-weight:700>35</span>  |END.B<span style=color:#0ff;font-weight:700>`</span>.B229-0015|
+</span></span><span style=display:flex><span>00000d40  <span style=color:#ff0;font-weight:700>35</span> <span style=color:#ff0;font-weight:700>64</span> <span style=color:#ff0;font-weight:700>34</span> <span style=color:#ff0;font-weight:700>38</span> <span style=color:#ff0;font-weight:700>30</span> <span style=color:#ff0;font-weight:700>34</span> <span style=color:#ff0;font-weight:700>30</span> <span style=color:#ff0;font-weight:700>62</span>  7d                       |5d48040b}|
+</span></span><span style=display:flex><span>00000d49
+</span></span></code></pre></div><p>Those last bytes looks like the ending of a flag, so we need to find the start of it.<br>I tried to upload the PNG file to an online metadata viewer, and one thing it gave me is actually to show me the picture itself.<br><img src=actualflag.bin alt=actualflag></p><p>I guess that was it! The full flag was FLAG-{1a91dd46-945d-11ec-B229-00155d48040b}.</p><div class=chevrons><div id=navigation></div></div></section></article><footer><div class=footline></div><div><p>Weeeeeeeeeeeeeeee</p></div></footer><script src=/writeups/js/jquery-2.x.min.js></script>
+<script type=text/javascript>var baseurl="https://n1trate.github.io/writeups"</script><script src=/writeups/js/clipboard.min.js></script>
+<script src=/writeups/js/featherlight.min.js></script>
+<script type=text/javascript src=/writeups/js/lunr.min.js></script>
+<script type=text/javascript src=/writeups/js/auto-complete.js></script>
+<script type=text/javascript src=/writeups/js/search.js></script>
+<script src=/writeups/theme-flex/script.js></script>
+<script src=https://n1trate.github.io/writeups/js/scripts.min.js></script></body></html>
