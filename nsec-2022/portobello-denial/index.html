@@ -1,0 +1,39 @@
+<!doctype html><html><head><title>Nitrate's writeups</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=revised content="2022-05-22T19:04:50 UTC"><title>Portobello - Denial :: Nitrate's writeups</title><link rel="shortcut icon" href=/writeups/images/favicon.png type=image/x-icon><link href=/writeups/css/nucleus.css rel=stylesheet><link href=/writeups/css/font-awesome.min.css rel=stylesheet><link href=/writeups/css/featherlight.min.css rel=stylesheet><link href=/writeups/css/auto-complete.css rel=stylesheet><link href=/writeups/theme-flex/style.css rel=stylesheet><link rel=stylesheet href=/writeups/css/bootstrap.min.css><link rel=stylesheet href=/writeups/css/custom.css></head><body data-url=/writeups/nsec-2022/portobello-denial/><header><div class=logo><a class=baselink href=https://n1trate.github.io/writeups>Nitrate's writeups</a></div><div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div></header><article><aside><ul class=menu><li data-nav-id=/writeups/ class=dd-item><a href=/writeups/><i class="fa fa-fw fa-home"></i></a></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/ class="dd-item alwaysopen haschildren"><div><a href=/writeups/nsec-2022/>NSec 2022</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i></div><ul><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-denial/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-denial/>Portobello - Denial</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-depression/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-depression/>Portobello - Depression</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-bargaining/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-bargaining/>Portobello - Bargaining</a></div></li><li data-nav-id=https://n1trate.github.io/writeups/nsec-2022/portobello-anger/ class=dd-item><div><a href=/writeups/nsec-2022/portobello-anger/>Portobello - Anger</a></div></li></ul></li><li data-nav-id=https://n1trate.github.io/writeups/tools/ class="dd-item alwaysopen"><div><a href=/writeups/tools/>Tools</a></div></li></ul><section></section></aside><section class=page><div class=nav-select><center>Navigation :
+<select onchange="location.href=this.value"><option value=/writeups/nsec-2022/>
+NSec 2022</option><option value=/writeups/nsec-2022/portobello-denial/ selected>
+-
+Portobello - Denial</option><option value=/writeups/nsec-2022/portobello-depression/>
+-
+Portobello - Depression</option><option value=/writeups/nsec-2022/portobello-bargaining/>
+-
+Portobello - Bargaining</option><option value=/writeups/nsec-2022/portobello-anger/>
+-
+Portobello - Anger</option><option value=/writeups/tools/>
+Tools</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div></div><h1>Portobello - Denial</h1><p>Challenge statement:</p><pre tabindex=0><code>Any data leaving or entering the Mycoverse goes through our AI-backed deep packet inspection appliance.
+The vendor told us that this box was what we needed. At this price tag, I know he’s right.
+
+Why do you need DNS logs anyway?
+We both know that DNS servers are just address books of Internet resources and I’ve never seen anyone abuse a plain old address book.
+
+The appliance would have blocked anything malicious anyway.
+I bet you don’t even have a certification to understand the protocol anyway.
+
+Don’t waste your time on the network capture, I skimmed throught it and found that your test device fd00:6e73:6563:3232::beef did nothing suspicious.
+
+Rosie Meyer - A+, Server+, CCNA, CCNP, CCIE, MSDST, CSM
+Network Admin
+</code></pre><p>We need to download the <a href=../portobello53.pcapng>pcap</a>. This is going to be the same pcap for all Portobello challenges.</p><p>We can start by taking a look at what we have. In wireshark, we can use the following filter to see only what is related to the ip at hand <code>ipv6.src == fd00:6e73:6563:3232::beef || ipv6.dst == fd00:6e73:6563:3232::beef</code>.<br><img src=1.png alt=1.png></p><p>We can see that the subdomain to lag-dns-cannot-be-abused-pinky-swear.ctf in the first query is f, then o, then r&mldr; So we can keep scrolling trying to see what it could be. We end up very soon on the word flag:<br>forgetspaceaboutspacesafespaceprotocolsspace <strong>flag</strong> dashd&mldr;<br><img src=2.png alt=2.png></p><p>We can filter on queries only, and see even better what is getting written out:<br><img src=3.png alt=3.png></p><p>By reading it until we get to the next &ldquo;space&rdquo; word, we can get the first flag.</p><blockquote><p>flag-dns-as-covert-communication-channels</p></blockquote><p>Flag submission:</p><pre tabindex=0><code>Portobello 53 - Denial (1/2)     |     1 | I hope the server can interpret covert queries (1/2)
+</code></pre><p>Forum message:</p><pre tabindex=0><code>I bet this is just a malformed DNS query. There’s no way a server would answer to this.
+</code></pre><p>The forum message was the hint for the other flag. The answer is key to understanding which subdomain is important.</p><p>Looking at the patterns, we can see that there is a lot less successful responses than NXDOMAIN. We can filter them and get all the successful answer&rsquo;s subdomains together with this:</p><div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ tshark -r portobello53.pcapng -Y <span style=color:#0ff;font-weight:700>&#34;ipv6.dst == fd00:6e73:6563:3232::beef&#34;</span> | grep pinky | grep -v <span style=color:#0ff;font-weight:700>&#34;No such&#34;</span> | awk <span style=color:#0ff;font-weight:700>&#39;{print $13}&#39;</span> | cut -d. -f1 | tr -d <span style=color:#0ff;font-weight:700>&#39;\n&#39;</span>
+</span></span><span style=display:flex><span>flagdashdnsdashserverhidinginternetnoise
+</span></span></code></pre></div><p>This gives us the flag:</p><blockquote><p>flag-dns-serverhidinginternetnoise</p></blockquote><p>Flag submission:</p><pre tabindex=0><code>Portobello 53 - Denial (2/2)     |     1 | Ouch - A two-way covert communication channel. Watch the client proceed to the next stage of grief (2/2)
+</code></pre><p>Forum message:</p><pre tabindex=0><code>A server answering correctly to your arbitrary DNS queries. That’s not the kind of thing that would take the Mycoverse down.
+</code></pre><div class=chevrons><div id=navigation></div></div></section></article><footer><div class=footline></div><div><p>Weeeeeeeeeeeeeeee</p></div></footer><script src=/writeups/js/jquery-2.x.min.js></script>
+<script type=text/javascript>var baseurl="https://n1trate.github.io/writeups"</script><script src=/writeups/js/clipboard.min.js></script>
+<script src=/writeups/js/featherlight.min.js></script>
+<script type=text/javascript src=/writeups/js/lunr.min.js></script>
+<script type=text/javascript src=/writeups/js/auto-complete.js></script>
+<script type=text/javascript src=/writeups/js/search.js></script>
+<script src=/writeups/theme-flex/script.js></script>
+<script src=https://n1trate.github.io/writeups/js/scripts.min.js></script></body></html>
